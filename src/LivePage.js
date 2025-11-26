@@ -62,9 +62,12 @@ function LivePage({ startAnimations = false }) {
         </main>
 
         <footer className="footer">
-          <button className="image-button-container">
+          <a
+            className="image-button-container special-video-btn"
+            href="https://naokiman-netflix.vercel.app/browse"
+          >
             <img src={watchNowBtnImg} alt="WATCH NOW" className="watch-now-image-btn" />
-          </button>
+          </a>
         </footer>
       </div>
     </div>

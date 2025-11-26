@@ -64,9 +64,14 @@ function JoinDiscordPage({ startAnimations = false }) {
         </div>
 
         <div className={`join-discord-cta ${startAnimations ? 'animate' : ''}`}>
-          <button className="join-discord-btn image-button-container">
-            <img src={joinNowImg} alt="Join Discord Now" />
-          </button>
+     <a
+        className={`join-discord-btn image-button-container`}
+        href="https://lounge.dmm.com/detail/4754/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={joinNowImg} alt="JOIN NOW" className="title-page-button-img" />
+      </a>
         </div>
       </div>
     </div>
