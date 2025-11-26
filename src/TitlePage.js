@@ -21,9 +21,14 @@ function TitlePage() {
         <div className="title-noise-lines" />
       </div>
 
-      <button className={`image-button-container title-page-button ${noiseVisible ? '' : 'button-ready'}`}>
+      <a
+        className={`image-button-container title-page-button ${noiseVisible ? '' : 'button-ready'}`}
+        href="https://lounge.dmm.com/detail/4754/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img src={joinNowImg} alt="JOIN NOW" className="title-page-button-img" />
-      </button>
+      </a>
     </div>
   );
 }

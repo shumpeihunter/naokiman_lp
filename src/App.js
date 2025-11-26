@@ -72,13 +72,6 @@ function App() {
       >
         <MerchEventsPage startAnimations={!!visibleSections.merch} />
       </section>
-
-      <section
-        data-section="salon"
-        className={`lp-section ${visibleSections.salon ? 'section-visible' : ''}`}
-      >
-        <SalonEntryPage startAnimations={!!visibleSections.salon} />
-      </section>
     </div>
   );
 }

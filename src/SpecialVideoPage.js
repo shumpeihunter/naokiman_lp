@@ -35,9 +35,12 @@ function SpecialVideoPage({ startAnimations = false }) {
               start={startAnimations}
             />
           </p>
-          <button className="image-button-container special-video-btn">
+          <a
+            className="image-button-container special-video-btn"
+            href="http://localhost:3001/browse"
+          >
             <img src={watchNowBtnImg} alt="WATCH NOW" className="watch-now-image-btn" />
-          </button>
+          </a>
         </div>
         <div className="special-video-right-glow"></div>
       </div>

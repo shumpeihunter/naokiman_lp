@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import backgroundImg from './assets/background.png';
 import watchNowBtnImg from './assets/watch-now-button.png';
@@ -15,11 +15,6 @@ function LivePage({ startAnimations = false }) {
     { src: liveVideo2, poster: placeholderThumb },
     { src: liveVideo3, poster: placeholderThumb },
   ];
-  const [activeVideos, setActiveVideos] = useState({});
-
-  const handleActivateVideo = index => {
-    setActiveVideos(prev => ({ ...prev, [index]: true }));
-  };
 
   return (
     <div className="app-container live-page" style={{ backgroundImage: `url(${backgroundImg})` }}>
@@ -43,24 +38,15 @@ function LivePage({ startAnimations = false }) {
                 className={`live-video-card ${startAnimations ? 'animate' : ''}`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                {activeVideos[index] ? (
-                  <video
-                    className="live-video-element"
-                    src={videoItem.src}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  />
-                ) : (
-                  <button
-                    className="live-video-placeholder"
-                    onClick={() => handleActivateVideo(index)}
-                  >
-                    <img src={videoItem.poster} alt="Live video preview" />
-                    <span>WATCH</span>
-                  </button>
-                )}
+                <video
+                  className="live-video-element"
+                  src={videoItem.src}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster={videoItem.poster}
+                />
               </div>
             ))}
           </div>
