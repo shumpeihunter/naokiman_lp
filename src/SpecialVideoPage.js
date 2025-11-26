@@ -37,7 +37,7 @@ function SpecialVideoPage({ startAnimations = false }) {
           </p>
           <a
             className="image-button-container special-video-btn"
-            href="http://localhost:3001/browse"
+            href="https://naokiman-netflix.vercel.app/browse"
           >
             <img src={watchNowBtnImg} alt="WATCH NOW" className="watch-now-image-btn" />
           </a>
